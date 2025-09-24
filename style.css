@@ -1,0 +1,53 @@
+/*1)font*/
+body {
+  font-family: Arial;
+}
+
+/*2–4*/
+#header {
+  background-color: dimgray;        /*background color*/
+  height: 6rem;                     /*height*/
+  border-bottom: 0.5rem solid LightSteelBlue; /*bottom border*/
+}
+
+/*5–6*/
+#header h1 {
+  font-size: 1.5rem;   /*font size*/
+  color: white;        /*color*/
+}
+
+/*7–9title section*/
+#title {
+  height: 34rem;         /*height*/
+  background-color: lightgray; /*background color*/
+  text-align: center;    /*center text*/
+}
+
+/* 10)Remove margins*/
+* {
+  margin: 0;
+}
+
+/*11–12*/
+#about {
+  display: flex; /*flex layout for img + paragraph*/
+}
+
+#about img {
+  height: 15.5rem; /*img height*/
+}
+
+/*13–17) Style all h3 headings*/
+h3 {
+  color: LightSteelBlue;  /*color*/
+  width: 13rem;           /*width*/
+  margin: 0 auto;         /*center block element*/
+  text-align: center;     /*center text inside*/
+  padding-top: 3rem;      /*extra padding*/
+}
+
+/*18–19) Style favorites*/
+#fav {
+  display: flex;               /*flex layout for lists*/
+  justify-content: space-evenly; /*evenly space lists*/
+}
