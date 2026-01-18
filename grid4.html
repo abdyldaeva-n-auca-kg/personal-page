@@ -1,45 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 7</title>
+    <title>News Portal</title>
     <link rel="stylesheet" href="grid4.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-<body>
-    <img src='https://cdn.imgchest.com/files/p7bwcdqap7n.png' style='position: absolute; top:0; left:0; z-index:-1; width: 100%;'>
+  <body>
     <div class="container">
-        <div class="box1">1</div>
-        <div class="box2">2</div>
-        <div class="box6">6</div>
-        
-        <div class="box3">
-            <nav class="main-menu">
-                <ul class="menu-list">
-                    <li><a href="#"><b>В мире</b></a></li>
-                    <li><a href="#"><b>Общество</b></a></li>
-                    <li><a href="#"><b>Экономика</b></a></li>
-                    <li><a href="#"><b>Спорт</b></a></li>
-                    <li><a href="#"><b>Безопасность</b></a></li>
-                    <li><a href="#"><b>Происшествия</b></a></li>
-                    <li><a href="#"><b>Без политики</b></a></li>
-                    <li><a href="#"><b>Политика</b></a></li>
-                </ul>
-                <div class="search-box">
-                    <form class="search-form">
-                        <input type="text" placeholder="Искать">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-            </nav>
+      <!-- Top Bar -->
+      <div class="box1">
+        <div class="top-bar">
+          <div class="logo">News Portal</div>
+          <div class="top-links">
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+          </div>
         </div>
-        
-        <div class="box4">4</div>
-        <div class="box7">7</div>
-        <div class="box8">8</div>
-        <div class="box5">5</div>
+      </div>
+
+      <!-- Banner/Advertisement -->
+      <div class="box2">
+        <div class="banner">
+          <img
+            src="./img/novosti-kg-rus-new-e1750755021998.png"
+            class="main-logo"
+          />
+        </div>
+      </div>
+
+      <!-- Main Image -->
+      <div class="box6">
+        <div class="main-image">
+          <button>Kyrgyz</button>
+          <button>Russian</button>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <div class="box3">
+        <nav class="main-menu">
+          <!-- Burger Button -->
+          <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul class="menu-list" id="menuList">
+            <li>
+              <a href="#"><b>World</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Society</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Economy</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Sports</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Security</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Incidents</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Non-Political</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Politics</b></a>
+            </li>
+          </ul>
+
+          <div class="search-box">
+            <form class="search-form">
+              <input type="text" placeholder="Search" />
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="box4">
+        <div class="main-content">
+          <article class="news-article">
+            <h2>Top Story of the Day</h2>
+            <p class="news-date">January 17, 2026</p>
+            <img src="./minimum-720x338.jpg" alt="News" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#" class="read-more">Read More →</a>
+          </article>
+
+          <article class="news-article">
+            <h3>Important Events</h3>
+            <p class="news-date">January 17, 2026</p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+            <a href="#" class="read-more">Read More →</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Side News Column -->
+      <div class="box7">
+        <div class="side-news">
+          <h3>Latest News</h3>
+          <div class="news-item">
+            <img src="./img/futzal.jpg" alt="News 1" />
+            <div class="news-text">
+              <h4>News Story 1</h4>
+              <p>Brief news description...</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="./img/gns-1024x512.webp" alt="News 2" />
+            <div class="news-text">
+              <h4>News Story 2</h4>
+              <p>Brief news description...</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="./img/ik-1024x683.jpg" alt="News 3" />
+            <div class="news-text">
+              <h4>News Story 3</h4>
+              <p>Brief news description...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="box8">
+        <div class="sidebar">
+          <div class="widget">
+            <h3>Popular</h3>
+            <ul>
+              <li><a href="#">Top News 1</a></li>
+              <li><a href="#">Top News 2</a></li>
+              <li><a href="#">Top News 3</a></li>
+              <li><a href="#">Top News 4</a></li>
+              <li><a href="#">Top News 5</a></li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            <h3>Weather</h3>
+            <div class="weather">
+              <i class="fas fa-cloud-sun"></i>
+              <p>Bishkek: +5°C</p>
+            </div>
+          </div>
+
+          <div class="widget">
+            <h3>Advertisement</h3>
+            <div class="ad-block">
+              <img src="./img/gns-1024x512.webp" alt="Advertisement" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="box5">
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h4>About Us</h4>
+              <p>News Portal - your source of current information</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-section">
+              <h4>Sections</h4>
+              <ul>
+                <li><a href="#">World</a></li>
+                <li><a href="#">Society</a></li>
+                <li><a href="#">Economy</a></li>
+                <li><a href="#">Sports</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h4>Information</h4>
+              <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h4>Newsletter</h4>
+              <form class="subscribe-form">
+                <input type="email" placeholder="Your email" />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 News Portal. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
     </div>
-</body>
+
+    <script>
+      // Burger menu
+      const burgerBtn = document.getElementById("burgerBtn");
+      const menuList = document.getElementById("menuList");
+
+      burgerBtn.addEventListener("click", function () {
+        burgerBtn.classList.toggle("active");
+        menuList.classList.toggle("active");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const isClickInside =
+          burgerBtn.contains(event.target) || menuList.contains(event.target);
+
+        if (!isClickInside && menuList.classList.contains("active")) {
+          burgerBtn.classList.remove("active");
+          menuList.classList.remove("active");
+        }
+      });
+
+      // Close menu when clicking on menu item
+      const menuLinks = menuList.querySelectorAll("a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          burgerBtn.classList.remove("active");
+          menuList.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
 </html>
