@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Portal</title>
+    <title>Final Project - News portal</title>
     <link rel="stylesheet" href="grid4.css" />
     <link
       rel="stylesheet"
@@ -12,31 +12,27 @@
     />
   </head>
   <body>
+    <img
+      src="https://cdn.imgchest.com/files/p7bwcdqap7n.png"
+      style="position: absolute; top: 0; left: 0; z-index: -1; width: 100%"
+    />
+
     <div class="container">
       <!-- Top Bar -->
       <div class="box1">
-        <div class="top-bar">
-          <div class="logo">News Portal</div>
-          <div class="top-links">
-            <a href="#">Login</a>
-            <a href="#">Sign Up</a>
-          </div>
+        <div class="top-buttons">
+          <button>About us</button>
+          <button>Radio online</button>
         </div>
       </div>
-
-      <!-- Banner/Advertisement -->
       <div class="box2">
-        <div class="banner">
-          <img
-            src="./img/novosti-kg-rus-new-e1750755021998.png"
-            class="main-logo"
-          />
+        <div class="logo">
+          <img src="./img/novosti-kg-logo.png" alt="" />
         </div>
       </div>
-
-      <!-- Main Image -->
       <div class="box6">
-        <div class="main-image">
+        <div class="action-buttons">
+          <button id="cssToggle">Switch layout</button>
           <button>Kyrgyz</button>
           <button>Russian</button>
         </div>
@@ -54,7 +50,7 @@
 
           <ul class="menu-list" id="menuList">
             <li>
-              <a href="#"><b>World</b></a>
+              <a href="#"><b>In the world</b></a>
             </li>
             <li>
               <a href="#"><b>Society</b></a>
@@ -63,19 +59,19 @@
               <a href="#"><b>Economy</b></a>
             </li>
             <li>
-              <a href="#"><b>Sports</b></a>
+              <a href="#"><b>Sport</b></a>
             </li>
             <li>
-              <a href="#"><b>Security</b></a>
+              <a href="#"><b>World Cup 2022</b></a>
+            </li>
+            <li>
+              <a href="#"><b>Safety</b></a>
             </li>
             <li>
               <a href="#"><b>Incidents</b></a>
             </li>
             <li>
-              <a href="#"><b>Non-Political</b></a>
-            </li>
-            <li>
-              <a href="#"><b>Politics</b></a>
+              <a href="#"><b>no politics</b></a>
             </li>
           </ul>
 
@@ -90,30 +86,94 @@
 
       <!-- Main Content -->
       <div class="box4">
+        <img src="./img/MainPic.png" alt="" />
+      </div>
+
+      <div class="box5">
         <div class="main-content">
           <article class="news-article">
-            <h2>Top Story of the Day</h2>
-            <p class="news-date">January 17, 2026</p>
-            <img src="./img/minimum-720x338.jpg" alt="News" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <a href="#" class="read-more">Read More →</a>
+            <div class="timeline timeline-1">
+              <span class="time">2 minutes ago</span>
+              <span class="tag">Ribbon</span>
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+            <div class="article-text">
+              <h2 class="element-1">
+                There will be no water in part of Bishkek on November 17
+              </h2>
+
+              <p class="paragraph-1">
+                There will be no water in part of Bishkek on November 17. This
+                was reported to the mayor's office. From 9 am to 8 pm, blackouts
+                are expected on Abakanskaya, Deng Xiaoping, Kustanaiskaya,
+                Profsoyuznaya, Volkova, Sadygaliev and Bezymyannaya streets. The
+                measures are related to the repair work at the water intake.
+                Related news: In part of Bishkek...
+                <a href="#" class="read-more">More...</a>
+              </p>
+            </div>
+            <div class="article-img">
+              <img class="image-1" src="./img/4thnews.png" alt="News 4" />
+            </div>
           </article>
 
           <article class="news-article">
-            <h3>Important Events</h3>
-            <p class="news-date">January 17, 2026</p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-            <a href="#" class="read-more">Read More →</a>
+            <div class="timeline timeline-2">
+              <span class="time">4 minutes ago</span>
+              <span class="tag">Ribbon</span>
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+            <div class="article-text">
+              <h2 class="element-2">
+                A new water supply system will appear in a number of villages in
+                the Chui region
+              </h2>
+
+              <p class="paragraph-2">
+                A new water supply system will appear in a number of villages in
+                the Chui region. The tender for construction work was announced
+                by the regional department of capital construction. More than
+                180 million soms are provided for the implementation of
+                projects. The contractor will have to carry out a water supply
+                system in the villages of Murak, Ak-Torpok, Chon-Aryk of the
+                Moscow region, as well as implement the second stage...
+                <a href="#" class="read-more">More...</a>
+              </p>
+            </div>
+            <div class="article-img">
+              <img class="image-2" src="./img/5thnews.png" alt="News 5" />
+            </div>
+          </article>
+
+          <article class="news-article">
+            <div class="timeline timeline-3">
+              <span class="time">11 minutes ago</span>
+              <span class="tag">Ribbon</span>
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+            <div class="article-text">
+              <h2 class="element-3">
+                The center of Bishkek will be cleared of minibuses by the middle
+                of next year
+              </h2>
+
+              <p class="paragraph-3">
+                The center of Bishkek will be cleared of minibuses by the middle
+                of next year. According to the head of the Department of
+                Transport Maksat Nusuvaliev, it is planned to launch gas-powered
+                buses, electric buses and trolleybuses instead of minibuses. The
+                official also noted that minibus drivers would not be left
+                without work. It is planned to provide them with new routes in
+                housing estates and districts,...
+                <a href="#" class="read-more">More...</a>
+              </p>
+            </div>
+            <div class="article-img">
+              <img class="image-3" src="./img/6thnews.png" alt="News 6" />
+            </div>
           </article>
         </div>
       </div>
@@ -121,26 +181,27 @@
       <!-- Side News Column -->
       <div class="box7">
         <div class="side-news">
-          <h3>Latest News</h3>
           <div class="news-item">
-            <img src="./img/futzal.jpg" alt="News 1" />
+            <img src="./img/1stnews.png" alt="News 1" />
             <div class="news-text">
-              <h4>News Story 1</h4>
-              <p>Brief news description...</p>
+              <h4>The World's population has reached 8 billion people</h4>
             </div>
           </div>
           <div class="news-item">
-            <img src="./img/gns-1024x512.webp" alt="News 2" />
+            <img src="./img/2ndnews.png" alt="News 2" />
             <div class="news-text">
-              <h4>News Story 2</h4>
-              <p>Brief news description...</p>
+              <h4>
+                Construction of a school for 500 students has begun in Batken
+              </h4>
             </div>
           </div>
           <div class="news-item">
-            <img src="./img/ik-1024x683.jpg" alt="News 3" />
+            <img src="./img/3rdnews.png" alt="News 3" />
             <div class="news-text">
-              <h4>News Story 3</h4>
-              <p>Brief news description...</p>
+              <h4>
+                The year ended with a high harvest - 1.4 times more grain was
+                received
+              </h4>
             </div>
           </div>
         </div>
@@ -149,82 +210,63 @@
       <!-- Right Sidebar -->
       <div class="box8">
         <div class="sidebar">
-          <div class="widget">
-            <h3>Popular</h3>
-            <ul>
-              <li><a href="#">Top News 1</a></li>
-              <li><a href="#">Top News 2</a></li>
-              <li><a href="#">Top News 3</a></li>
-              <li><a href="#">Top News 4</a></li>
-              <li><a href="#">Top News 5</a></li>
-            </ul>
-          </div>
-
-          <div class="widget">
-            <h3>Weather</h3>
-            <div class="weather">
-              <i class="fas fa-cloud-sun"></i>
-              <p>Bishkek: +5°C</p>
+          <div class="widget weather-widget">
+            <h2>Weather in Kyrgyzstan</h2>
+            <div class="weather-content">
+              <img src="./img/weather.png" alt="Weather in Kyrgyzstan" />
             </div>
           </div>
 
-          <div class="widget">
-            <h3>Advertisement</h3>
-            <div class="ad-block">
-              <img src="./img/gns-1024x512.webp" alt="Advertisement" />
+          <div class="widget exchange-widget">
+            <h3>Exchange rates</h3>
+
+            <div class="exchange-box">
+              <div class="exchange-header">
+                Официальные курсы валют
+                <br />
+                с 15.11.2022 по 16.11.2022
+              </div>
+
+              <table class="exchange-table">
+                <tr>
+                  <td>1 USD/KGS</td>
+                  <td>84,3817</td>
+                  <td>84,3808</td>
+                  <td class="neutral">+0,00%</td>
+                </tr>
+                <tr>
+                  <td>1 EUR/KGS</td>
+                  <td>87,2886</td>
+                  <td>87,8151</td>
+                  <td class="positive">+0,60%</td>
+                </tr>
+                <tr>
+                  <td>1 RUB/KGS</td>
+                  <td>1,3949</td>
+                  <td>1,3877</td>
+                  <td class="negative">-0,52%</td>
+                </tr>
+                <tr>
+                  <td>1 KZT/KGS</td>
+                  <td>0,1835</td>
+                  <td>0,1830</td>
+                  <td class="negative">-0,27%</td>
+                </tr>
+              </table>
+
+              <div class="exchange-footer">Автоинформатор - тел. 669177</div>
             </div>
+          </div>
+          <div class="ad-block">
+            <img src="./img/AdEuropeMedia.png" alt="Advertisement" />
+          </div>
+          <div class="ad-block">
+            <img src="./img/AdRadioPlayer.png" alt="Advertisement" />
+          </div>
+          <div class="ad-block">
+            <img src="./img/AdRadioLux.png" alt="Advertisement" />
           </div>
         </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="box5">
-        <footer class="footer">
-          <div class="footer-content">
-            <div class="footer-section">
-              <h4>About Us</h4>
-              <p>News Portal - your source of current information</p>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
-
-            <div class="footer-section">
-              <h4>Sections</h4>
-              <ul>
-                <li><a href="#">World</a></li>
-                <li><a href="#">Society</a></li>
-                <li><a href="#">Economy</a></li>
-                <li><a href="#">Sports</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-section">
-              <h4>Information</h4>
-              <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-section">
-              <h4>Newsletter</h4>
-              <form class="subscribe-form">
-                <input type="email" placeholder="Your email" />
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-
-          <div class="footer-bottom">
-            <p>&copy; 2026 News Portal. All rights reserved.</p>
-          </div>
-        </footer>
       </div>
     </div>
 

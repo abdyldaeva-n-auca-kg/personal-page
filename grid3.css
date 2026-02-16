@@ -4,31 +4,26 @@
 }
 
 body {
-    /* background-image: url(https://cdn.imgchest.com/files/g4z9cwlpm72.png); */
-    background-repeat: no-repeat;
-    max-width: 1278px;
-    min-height: 1583px;
-    font-size: 2rem;
-    opacity: 1;
-    color: purple;
-    position: relative;
-    margin: 0 auto;
-}
-
-.container > * {
-    border: 2px dashed purple;
+    margin: 0;
+    display: flex;
+    /* justify-content: center; */
 }
 
 .container {
+    max-width: 1278px;
+    min-height: 1583px;
+    position: relative;
+    margin: 0 auto;
+
     display: grid;
     grid-template-rows:
         38px     
-        120px    
-        62px     
-        428px   
-        915px;   
+        123px    
+        59px     
+        434px   
+        928px;   
 
-    grid-template-columns: 270px 212px 463px 335px;
+    grid-template-columns: 266px 208px 453px 325px;
 
     grid-template-areas:
         "one one one one"
@@ -38,14 +33,33 @@ body {
         "five five five eight";
 }
 
+.bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: fill; */
+}
+
+.overlay {
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.base {
+    z-index: 0;
+}
+
+.container > div {
+    position: relative;
+    z-index: 2;
+    border: 2px dashed purple;
+}
+
 /* GRID AREAS */
 .box1 { grid-area: one; }
 .box2 { grid-area: two; }
-.box3 { 
-    grid-area: three; 
-    border: none !important;
-    padding: 0;
-}
+.box3 { grid-area: three; }
 .box4 { grid-area: four; }
 .box5 { grid-area: five; }
 .box6 { grid-area: six; }
@@ -53,7 +67,7 @@ body {
 .box8 { grid-area: eight; }
 
 
-.box3 .main-menu {
+/* .box3 .main-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +78,7 @@ body {
 }
 
 /* Список меню */
-.box3 .menu-list {
+/* .box3 .menu-list {
     display: flex;
     list-style: none;
     padding: 0;
@@ -129,4 +143,4 @@ body {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
-}
+}  */
