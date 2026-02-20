@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Project - News portal</title>
-    <link rel="stylesheet" href="grid4.css" />
+    <link id="themeStylesheet" rel="stylesheet" href="grid4.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
-    <img
+    <!-- Background image -->
+    <!-- <img
       src="https://cdn.imgchest.com/files/p7bwcdqap7n.png"
       style="position: absolute; top: 0; left: 0; z-index: -1; width: 100%"
-    />
+    /> -->
 
     <div class="container">
       <!-- Top Bar -->
@@ -31,6 +32,7 @@
         </div>
       </div>
       <div class="box6">
+          
         <div class="action-buttons">
           <button id="cssToggle">Switch layout</button>
           <button>Kyrgyz</button>
@@ -40,6 +42,7 @@
 
       <!-- Navigation Menu -->
       <div class="box3">
+         
         <nav class="main-menu">
           <!-- Burger Button -->
           <button class="burger-btn" id="burgerBtn" aria-label="Menu">
@@ -81,6 +84,7 @@
               <button type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
+
         </nav>
       </div>
 
@@ -151,8 +155,8 @@
             <div class="timeline timeline-3">
               <span class="time">11 minutes ago</span>
               <span class="tag">Ribbon</span>
-              <span class="dot"></span>
               <span class="line"></span>
+              <span class="dot"></span>
             </div>
             <div class="article-text">
               <h2 class="element-3">
@@ -271,34 +275,66 @@
     </div>
 
     <script>
-      // Burger menu
       const burgerBtn = document.getElementById("burgerBtn");
       const menuList = document.getElementById("menuList");
+
+      function closeMobileMenu() {
+        burgerBtn.classList.remove("active");
+        menuList.classList.remove("active");
+        burgerBtn.setAttribute("aria-expanded", "false");
+      }
+
+      burgerBtn.setAttribute("aria-expanded", "false");
+      burgerBtn.setAttribute("aria-controls", "menuList");
 
       burgerBtn.addEventListener("click", function () {
         burgerBtn.classList.toggle("active");
         menuList.classList.toggle("active");
+        burgerBtn.setAttribute(
+          "aria-expanded",
+          menuList.classList.contains("active") ? "true" : "false"
+        );
       });
 
-      // Close menu when clicking outside
       document.addEventListener("click", function (event) {
         const isClickInside =
           burgerBtn.contains(event.target) || menuList.contains(event.target);
 
         if (!isClickInside && menuList.classList.contains("active")) {
-          burgerBtn.classList.remove("active");
-          menuList.classList.remove("active");
+          closeMobileMenu();
         }
       });
 
-      // Close menu when clicking on menu item
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 500) {
+          closeMobileMenu();
+        }
+      });
+
       const menuLinks = menuList.querySelectorAll("a");
       menuLinks.forEach((link) => {
         link.addEventListener("click", function () {
-          burgerBtn.classList.remove("active");
-          menuList.classList.remove("active");
+          closeMobileMenu();
         });
       });
+
+      (function () {
+        const link = document.getElementById("themeStylesheet");
+        const toggleBtn = document.getElementById("cssToggle");
+
+        const saved = localStorage.getItem("layout");
+        if (saved) link.href = saved;
+
+        toggleBtn.addEventListener("click", () => {
+          const next =
+            link.getAttribute("href") === "grid4.css"
+              ? "grid5.css"
+              : "grid4.css";
+
+          link.href = next;
+          localStorage.setItem("layout", next);
+        });
+      })();
     </script>
   </body>
 </html>
